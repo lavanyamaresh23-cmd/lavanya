@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>User Form</title>
-<script>
-function validateForm() {
-    let name = document.forms["form"]["username"].value;
-    let email = document.forms["form"]["email"].value;
-
-    if (name == "" || email == "") {
-        alert("All fields are required!");
-        return false;
-    }
-    return true;
-}
-</script>
+<title>Cookie Form</title>
 </head>
 <body>
 
-<h2>User Data Form</h2>
+<h2>Enter Your Name</h2>
 
-<form name="form" action="processUser" method="post" onsubmit="return validateForm()">
-    Username: <input type="text" name="username"><br><br>
-    Email: <input type="email" name="email"><br><br>
-    Designation: <input type="text" name="designation"><br><br>
-
+<form action="CookieServlet" method="get">
+    Name: <input type="text" name="userName" required>
     <input type="submit" value="Submit">
 </form>
 
