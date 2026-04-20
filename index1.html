@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Student Result</title>
+
+<script>
+function validate() {
+    let fields = document.forms["form"].elements;
+
+    for (let i = 0; i < fields.length; i++) {
+        if (fields[i].value == "") {
+            alert("All fields are required!");
+            return false;
+        }
+    }
+    return true;
+}
+</script>
+
+</head>
 <body>
 
-<h2>Start Custom Session</h2>
+<h2>Student Marks Form</h2>
 
-<form action="welcome1.jsp">
-    Name: <input type="text" name="uname" required><br><br>
+<form name="form" action="ResultServlet" method="post" onsubmit="return validate()">
 
-    Session Time (seconds):
-    <input type="number" name="time" required><br><br>
+Roll No: <input type="text" name="rollno"><br><br>
+Name: <input type="text" name="name"><br><br>
 
-    <input type="submit" value="Start Session">
+Sub1: <input type="number" name="s1"><br>
+Sub2: <input type="number" name="s2"><br>
+Sub3: <input type="number" name="s3"><br>
+Sub4: <input type="number" name="s4"><br>
+Sub5: <input type="number" name="s5"><br><br>
+
+<input type="submit" value="Calculate Result">
+
 </form>
 
 </body>
