@@ -1,23 +1,28 @@
-package lab1;
+package lab2;
 
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class p4 {
     public static void main(String[] args) {
 
-        List<String> ls = new ArrayList<>();
+        Map<Integer, String> map1 = new HashMap<>();
 
-        ls.add("Orange");
-        ls.add("green");   // fixed typo
-        ls.add("pink");
-        ls.add("red");
-        ls.add("Blue");
+        // Adding elements
+        map1.put(1, "Red");
+        map1.put(2, "Green");
+        map1.put(3, "Black");
+        map1.put(4, "White");
+        map1.put(5, "Blue");
 
-        System.out.println(ls);
+        // Check before removing
+        System.out.println("Before removing, is map empty? " + map1.isEmpty());
 
-        System.out.println("Using sublist:");
-        System.out.println(ls.subList(0, 2));
+        // Remove all elements
+        map1.clear();
+
+        // Check after removing
+        System.out.println("After removing, is map empty? " + map1.isEmpty());
     }
 }
-
-
